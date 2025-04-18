@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stop à la Déforestation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e7f0df, #c8e6c9);
+        }
+        header, footer {
+            text-align: center;
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #388e3c;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1b5e20;
+        }
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .scenario {
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .scenario:hover {
+            transform: scale(1.02);
+        }
+        .positive {
+            background-color: #f1f8e9;
+            border-left: 5px solid #66bb6a;
+        }
+        .warning {
+            background-color: #ffebee;
+            border-left: 5px solid #e53935;
+        }
+        h2 {
+            color: #2e7d32;
+        }
+        footer p {
+            margin: 0;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stop à la Déforestation</h1>
+        <p>Informons-nous et agissons ensemble pour un avenir vert</p>
+    </header>
+
+    <nav>
+        <a href="#intro">Définition</a>
+        <a href="#scenario1">Scénario positif</a>
+        <a href="#scenario2">Scénario négatif</a>
+        <a href="#carte">Carte</a>
+        <a href="#stats">Statistiques</a>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>Qu'est-ce que la déforestation ?</h2>
+            <p>La déforestation est un processus alarmant qui implique la destruction massive des forêts dans le but d'utiliser les terres à d'autres fins. Cette pratique résulte souvent de l'agriculture industrielle, de l'élevage intensif, de la construction d'infrastructures ou de l'exploitation forestière. En détruisant ces écosystèmes précieux, nous contribuons à l’extinction d’innombrables espèces animales et végétales, au changement climatique, à la dégradation des sols, et à la perturbation du cycle de l’eau.</p>
+            <p>Les forêts sont souvent appelées les "poumons de la planète" car elles absorbent le dioxyde de carbone et produisent de l’oxygène. Elles régulent aussi les températures, protègent contre l’érosion, et fournissent des ressources vitales à des millions d’êtres humains. Pourtant, chaque minute, l’équivalent de 36 terrains de football de forêts est perdu dans le monde. Sans actions concrètes, ce phénomène entraînera des conséquences irréversibles pour l’humanité.</p>
+        </section>
+
+        <section id="scenario1">
+            <h2>Scénario 1 : Les citoyens agissent</h2>
+            <div class="scenario positive">
+                <p>Dans ce scénario, la population mondiale prend conscience de l’urgence. Les citoyens modifient leurs comportements : ils réduisent leur consommation de papier, soutiennent les produits issus de sources durables, et s’engagent dans des actions locales comme le reboisement ou le nettoyage des forêts. Les gouvernements instaurent des politiques strictes de protection de l’environnement. Les entreprises adoptent des modèles d’affaires plus écologiques.</p>
+                <p>Grâce à ces efforts combinés, les zones forestières retrouvent leur vitalité. La biodiversité revient, les sols se régénèrent, et les jeunes générations bénéficient d’un environnement sain. Ce scénario démontre que la mobilisation collective peut inverser la tendance et offrir un avenir harmonieux entre l’homme et la nature.</p>
+            </div>
+        </section>
+
+        <section id="scenario2">
+            <h2>Scénario 2 : Les citoyens ignorent le problème</h2>
+            <div class="scenario warning">
+                <p>Si l’inaction persiste, les forêts continueront à disparaître à une vitesse alarmante. L’air deviendra plus pollué, les sols s’épuiseront, les catastrophes naturelles comme les inondations et les sécheresses deviendront plus fréquentes. Des espèces entières s’éteindront, mettant en péril les écosystèmes entiers et, par extension, notre propre survie.</p>
+                <p>Les conséquences économiques seront désastreuses : pertes agricoles, migrations climatiques massives, conflits pour les ressources naturelles. Ce scénario est un avertissement clair : en ignorant la déforestation, nous scellons notre propre avenir dans un monde instable, appauvri et hostile.</p>
+            </div>
+        </section>
+
+        <section id="carte">
+            <h2>Carte des zones touchées</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31847318.89941672!2d-68.7242375399284!3d-3.438295119729396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91620460f541e9bb%3A0x77661f8de380bba!2sAmazonie!5e0!3m2!1sfr!2sfr!4v1713452941000" 
+                width="100%" 
+                height="480" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <section id="stats">
+            <h2>Statistiques sur la déforestation</h2>
+            <canvas id="chart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Agissons aujourd'hui pour un avenir durable - Ensemble contre la déforestation</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('chart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Amazonie', 'Afrique centrale', 'Asie du Sud-Est'],
+                datasets: [{
+                    label: 'Millions d\'hectares perdus (2024)',
+                    data: [8.2, 4.1, 3.6],
+                    backgroundColor: [
+                        'rgba(76, 175, 80, 0.6)',
+                        'rgba(255, 87, 34, 0.6)',
+                        'rgba(33, 150, 243, 0.6)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
